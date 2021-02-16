@@ -267,7 +267,7 @@ section .title::after{
 .services .title::after,
 .teams .title::after{
     background: #111;
-    content: "what i have";
+    content: "click the icons";
     color: cornflowerblue;
 }
 .services .serv-content .card{
@@ -276,6 +276,7 @@ section .title::after{
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
+    margin-bottom: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -366,13 +367,13 @@ section .title::after{
     width: 90%;
 }
 .skills-content .right .css::before{
-    width: 60%;
+    width: 90%;
 }
 .skills-content .right .js::before{
-    width: 80%;
+    width: 60%;
 }
-.skills-content .right .php::before{
-    width: 50%;
+.skills-content .right .react::before{
+    width: 80%;
 }
 .skills-content .right .mysql::before{
     width: 70%;
