@@ -36,13 +36,14 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .skills, .teams, .contact, .portfolio, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content, 
 .services .serv-content,
 .skills .skills-content,
-.contact .contact-content{
+.contact .contact-content, 
+.portfolio{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -72,7 +73,6 @@ section .title::after{
     bottom: -8px;
     left: 50%;
     font-size: 20px;
-    /* color: crimson; */
     padding: 0 5px;
     background: #fff;
     transform: translateX(-50%);
@@ -90,7 +90,7 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: cornflowerblue;
+    background: #1C3144;
 }
 .navbar .max-width{
     display: flex;
@@ -98,42 +98,41 @@ section .title::after{
     justify-content: space-between;
 }
 .navbar .logo a{
-    color: #fff;
+    color: #EC0B43;
     font-size: 35px;
     font-weight: 600;
 }
 .navbar .logo a span{
-    color: cornflowerblue;
+    color: #EC0B43;
     transition: all 0.3s ease;
 }
-.navbar.sticky .logo a span{
-    color: #f1ff62;
-}
+
 .navbar .menu li{
     list-style: none;
     display: inline-block;
+    padding-left: 35px;
 }
 .navbar .menu li a{
     display: block;
-    color:#f1ff62;
+    color:#558564;
     font-size: 23px;
     font-weight: 500;
-    margin-left: 25px;
+    margin-left: 30px;
     transition: color 0.3s ease;
-    cursor: crosshair;
+    cursor: default;
 }
 .navbar .menu li a:hover{
     color: #f1ff62;
 }
 .navbar.sticky .menu li a:hover{
-    color: #fff;
+    color: #f1ff62;
 }
 
 /* menu btn styling */
 .menu-btn{
-    color: #f1ff62;
+    color: #91C4F2;
     font-size: 23px;
-    cursor: pointer;
+    cursor:default;
     display: none;
 }
 .scroll-up-btn{
@@ -192,30 +191,33 @@ section .title::after{
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color:#f1ff62;
+    color:#EC0B43;
     font-weight: 500;
 }
 .home .home-content a{
     display: inline-block;
-    background: #f1ff62;
-    color: cornflowerblue;
+    background: #1C3144;
+    color: #558564;
     font-size: 25px;
     padding: 12px 36px;
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    /* border: 2px solid crimson; */
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-    color: #f1ff62;
-    background: cornflowerblue;
+    color: white;
+    background: none;
 }
 
 /* about section styling */
+.about{
+    background: #1C3144;
+}
 .about .title::after{
     content: "who i am";
-    color: cornflowerblue;
+    color: #558564;
+    background-color: #1C3144;
 }
 .about .about-content .left{
     width: 45%;
@@ -233,27 +235,28 @@ section .title::after{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: white;
 }
 .about .about-content .right .text span{
-    color: cornflowerblue;
+    color: #558564;
 }
 .about .about-content .right p{
     text-align: justify;
+    color: white;
 }
 .about .about-content .right a{
     display: inline-block;
-    background: #f1ff62;
-    color: cornflowerblue;
+    background: #558564;
+    color: #1C3144;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    /* border: 2px solid cornflowerblue; */
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover{
-    color: cornflowerblue;
+    color: white;
     background: none;
 }
 
@@ -270,10 +273,9 @@ section .title::after{
 .teams .title::after{
     background: #111;
     content: "click the icons";
-    color: cornflowerblue;
+    color: #EC0B43;
 }
 .services .serv-content .card{
-    /* width: calc(33% - 10px); */
     width: 800px;
     margin: 50px auto 0;
     display:table;
@@ -287,7 +289,7 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .services .serv-content .card:hover{
-    background: cornflowerblue;
+    background: #EC0B43;
 }
 .services .serv-content .card .box{
     transition: all 0.3s ease;
@@ -298,7 +300,7 @@ section .title::after{
 }
 .services .serv-content .card i{
     font-size: 50px;
-    color: cornflowerblue;
+    color: #EC0B43;
     transition: color 0.3s ease;
 }
 .services .serv-content .card:hover i{
@@ -311,10 +313,13 @@ section .title::after{
 }
 
 /* skills section styling */
-
+.skills{
+    background: #1C3144;
+}
 .skills .title::after{
     content: "what i know";
-    color: cornflowerblue;
+    color: #558564;
+    background-color: #1C3144;
 }
 .skills .skills-content .column{
     width: calc(50% - 30px);
@@ -323,25 +328,26 @@ section .title::after{
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: white;
 }
 .skills .skills-content .left p{
     text-align: justify;
+    color: white;
 }
 .skills .skills-content .left a{
     display: inline-block;
-    background: #f1ff62;
-    color: cornflowerblue;
+    background: #558564;
+    color: #1C3144;
     font-size: 18px;
     font-weight: 500;
     padding: 8px 16px;
     margin-top: 20px;
     border-radius: 6px;
-    /* border: 2px solid crimson; */
     transition: all 0.3s ease;
 }
 .skills .skills-content .left a:hover{
-    color: #f1ff62;
-    background: cornflowerblue;
+    color: white;
+    background: none;
 }
 .skills .skills-content .right .bars{
     margin-bottom: 15px;
@@ -359,7 +365,7 @@ section .title::after{
 .skills .skills-content .right .line{
     height: 5px;
     width: 100%;
-    background: #f1ff62;
+    background: #EC0B43;
     position: relative;
 }
 .skills .skills-content .right .line::before{
@@ -368,92 +374,152 @@ section .title::after{
     height: 100%;
     left: 0;
     top: 0;
-    background: cornflowerblue;
+    background: #558564;
 }
 .skills-content .right .html::before{
     width: 90%;
 }
 .skills-content .right .css::before{
-    width: 90%;
+    width: 75%;
 }
 .skills-content .right .js::before{
-    width: 70%;
+    width: 90%;
 }
 .skills-content .right .react::before{
     width: 80%;
 }
 .skills-content .right .mysql::before{
-    width: 70%;
+    width: 80%;
 }
 
 /* projects section styling */
-.teams .title::after{
-    content: "what i can do";
-    color: cornflowerblue;
+.portfolio{
+    color:#fff;
+    background: #111;
+    padding: 50px 0;
 }
-.teams .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
+.portfolio .title{
+    position: relative;
     text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.portfolio .title::after{
+    content: "what i've done";
+    color: #558564;
+    background-color: #111;
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    padding: 0 5px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.portfolio .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: white;
+    transform: translateX(-50%);
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(4, 280px);
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
 }
-.teams .carousel .card:hover{
-    background: cornflowerblue;
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
 }
-.teams .carousel .card .box{
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #558564);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.teams .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid cornflowerblue;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover img{
-    border-color: #fff;
-}
-.owl-dots{
+    flex-direction: column;
+    padding: 0 40px;
     text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.work-name{
+    color: #E3E7AF;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.work-desc{
+    color: white;
+    font-weight: 400;
+}
+.layer a{
     margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
+    color: #EC0B43;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    border: 2px solid cornflowerblue!important;
-    transition: all 0.3s ease;
+    text-align: center;
 }
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
+.work:hover img{
+    transform: scale(1.1);
 }
-.owl-dot.active,
-.owl-dot:hover{
-    background: #f1ff62!important;
+.work:hover .layer{
+    height: 100%;
+}
+.cbtn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #558564;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #E3E7AF;
+    transition: background 0.5s;
+}
+.cbtn:hover{
+    background:#558564;
+    border: none;
 }
 
+
+
 /* contact section styling */
+.contact{
+    background: #111;
+}
+.title{
+    color: white;
+}
 .contact .title::after{
     content: "get in touch";
-    color: cornflowerblue;
+    color: #ec0b43;
+    background: #111;
 }
 .contact .contact-content .column{
     width: calc(50% - 30px);
@@ -462,9 +528,11 @@ section .title::after{
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: white;
 }
 .contact .contact-content .left p{
     text-align: justify;
+    color: white;
 }
 .contact .contact-content .left .icons{
     margin: 10px 0;
@@ -479,13 +547,14 @@ section .title::after{
 }
 .contact .contact-content .row i{
     font-size: 25px;
-    color: cornflowerblue;
+    color: #ec0b43;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
+    color: #EC0B43;
 }
 .contact .contact-content .info .sub-title{
-    color: #333;
+    color: #E3E7AF;
 }
 .contact .right form .fields{
     display: flex;
@@ -502,6 +571,7 @@ section .title::after{
 }
 .contact .right form .name{
     margin-right: 10px;
+    color: #E3E7AF;
 }
 .contact .right form .email{
     margin-left: 10px;  
@@ -510,7 +580,7 @@ section .title::after{
 .contact .right form .textarea textarea{
     height: 100%;
     width: 100%;
-    border: 1px solid lightgrey;
+    border: 2px solid lightgrey;
     border-radius: 6px;
     outline: none;
     padding: 0 15px;
@@ -533,9 +603,9 @@ section .title::after{
 .contact .right form .button button{
     width: 100%;
     height: 100%;
-    border: 2px solid cornflowerblue;
-    background: cornflowerblue;
-    color: #fff;
+    border: 2px solid #EC0B43;
+    background: #EC0B43;
+    color: #E3E7AF;
     outline: none;
     font-size: 20px;
     font-weight: 500;
@@ -544,8 +614,9 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .contact .right form .button button:hover{
-    color:cornflowerblue;
-    background: #f1ff62;
+    color:#558564;
+    background: none;
+    border: none;
 }
 
 /* footer section styling */
@@ -556,7 +627,7 @@ footer{
     text-align: center;
 }
 footer span a{
-    color: #f1ff62;
+    color: #558564;
     text-decoration: none;
 }
 footer span a:hover{
