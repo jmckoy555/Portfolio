@@ -167,7 +167,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("views/images/Webp.net-resizeimage\ \(1\).jpg") no-repeat center;
+    background: url("views/images/bgimage.jpg") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -180,15 +180,18 @@ section .title::after{
 }
 .home .home-content .text-1{
     font-size: 27px;
+    color:coral;
 }
 .home .home-content .text-2{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
+    color: coral;
 }
 .home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
+    color: coral;
 }
 .home .home-content .text-3 span{
     color:#EC0B43;
@@ -716,6 +719,18 @@ footer span a:hover{
     .contact .contact-content .column{
         width: 100%;
         margin-bottom: 35px;
+    }
+    .portfolio .container{
+        width: 100%;
+    }
+    .portfolio .work-list{
+         display: grid;
+         justify-content: center;
+         margin: 0 auto 60px; 
+        grid-template-columns: repeat(1,250px);
+    }
+    .portfolio .title::after{
+        content:" ";
     }
 }
 
